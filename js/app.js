@@ -2,6 +2,7 @@
 $(document).ready(function(){
 	var answer = Math.floor((Math.random() * 100) + 1);
 	var guesses = [];
+	console.log(answer);
 	
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
@@ -28,6 +29,11 @@ $(document).ready(function(){
 	});
 	$('.new').click(function() {
 		answer = Math.floor((Math.random() * 100) + 1);
+		$('#guessList').empty();
+		postMessage('Make your Guess!');
+		changeColor('#cc324b');
+		$('#count').html('0');
+		guesses = [];
 	});
 
 });
