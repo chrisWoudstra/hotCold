@@ -60,11 +60,6 @@ function playGame(answer, guesses) {
 		$('#count').html(numGuesses + 1);
 		if (guess == answer) {
 			postMessage('You got it! Way to go!'); changeColor('#16B287');
-			$('#guessButton').click(function() {
-				alert('You\'ve already won. Please start a new game to try again!');
-				postMessage('Please start a new game!');
-				changeColor('#16B287');
-				});
 		}
 		
 		else if (distance > 40) {
